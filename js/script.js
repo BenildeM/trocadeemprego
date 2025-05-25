@@ -1,17 +1,29 @@
+// /js/script.js
+
 function abrirCheckout() {
-  // Configuração básica do PaySuite (substitua pelos seus dados reais)
-  const checkoutConfig = {
-    merchantId: "SEU_MERCHANT_ID",
-    amount: 375, // Valor em MT
+  // 1. Configuração do checkout
+  const payload = {
+    productId: "ebook_troca_emprego",
+    amount: 375, // MT
     currency: "MZN",
-    reference: "ebook-" + Date.now(),
-    callbackUrl: "https://benildem.github.io/trocadeemprego/sucesso.html",
-    cancelUrl: "https://benildem.github.io/trocadeemprego/",
+    customerEmail: "", // Será preenchido pelo form
+    callbackUrl: window.location.origin + "/sucesso.html",
+    cancelUrl: window.location.href
   };
 
-  // Abre o checkout em nova janela (simulação - integração real requer API do PaySuite)
-  window.open(
-    `https://checkout.paysuite.com/?data=${encodeURIComponent(JSON.stringify(checkoutConfig))}`,
-    "_blank"
-  );
+  // 2. Redirecionamento para o PaySuite (URL de exemplo - substitua pela real)
+  const paysuiteUrl = `https://api.paysuite.com/checkout?data=${encodeURIComponent(JSON.stringify(payload))}`;
+  
+  // 3. Abre em nova aba (ou pode usar window.location.href)
+  window.open(paysuiteUrl, "_blank");
+}
+
+// 4. Adicionar máscara para telefone (opcional)
+function formatarTelefone(input) {
+  input.value = input.value
+    .replace(/\D/g, '')
+    .replace(/(\d{2})(\d)/, '$1 $2')
+    .replace(/(\d{4})(\d)/, '$1 $2')
+    .replace(/(\d{4})(\d{1,2})/, '$1 $2')
+    .replace(/( \d{4})\d+?$/, '$1');
 }
