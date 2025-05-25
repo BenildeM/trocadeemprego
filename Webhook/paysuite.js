@@ -1,21 +1,11 @@
 // webhook/paysuite.js
-const express = require('express');
-const router = express.Router();
-const bodyParser = require('body-parser');
+module.exports = (req, res, next) => {
+  // Valida assinatura do PaySuite (implemente conforme documentação)
+  const signatureValid = validarAssinatura(req.headers['x-paysuite-signature']);
 
-// Middleware para capturar JSON puro (importante para validar assinatura)
-router.use(bodyParser.raw({ type: 'application/json' }));
+  if (!signatureValid) {
+    return res.status(403).send('Assinatura inválida');
+  }
 
-router.post('/paysuite', (req, res) => {
-  const sig = req.headers['paysuite-signature']; // Exemplo
-  const secret = process.env.PAYSUITE_WEBHOOK_SECRET;
-
-  // Aqui você faria a verificação do webhook usando seu segredo
-  // e processaria o evento se estiver válido
-
-  console.log('Webhook recebido:', req.body.toString());
-
-  res.status(200).send('Webhook recebido com sucesso');
-});
-
-module.exports = router;
+  next(); // Passa para o handler no server.js
+};
