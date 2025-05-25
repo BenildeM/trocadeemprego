@@ -1,0 +1,332 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #1f2937;
+}
+
+/* Seção 1: Hero */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.left {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem 2rem;
+}
+
+.left h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.left p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: #4b5563;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.bonus {
+  color: #10b981;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: linear-gradient(to right, #0f172a, #2563eb);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+}
+
+.right {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção 2: Benefícios */
+.features-section {
+  background-color: #f9fafb;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.features-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.features-container h2 {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.features-container .subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.feature-card .icon {
+  font-size: 1.25rem;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.feature-card h3 {
+  font-size: 1.125rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* Seção 3: Testemunho */
+.testimonial-section {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.testimonial-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.stars {
+  font-size: 1.25rem;
+  color: #f59e0b;
+  margin-bottom: 1rem;
+}
+
+.quote {
+  font-style: italic;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.user-role {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Seção 4: Sobre a Autora */
+.author-section {
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
+}
+
+.author-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.author-avatar {
+  font-size: 3rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-info h2 {
+  font-size: 1.25rem;
+  color: #2563eb;
+  margin-bottom: 0.25rem;
+}
+
+.author-info h3 {
+  font-size: 1.5rem;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.author-info p {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+/* Seção 5: Oferta de Carreira */
+.career-offer-section {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.career-offer-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.career-offer-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.career-offer-container .highlight {
+  font-size: 1rem;
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+}
+
+.price-offer {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.bonus-offer {
+  font-size: 0.95rem;
+  color: #10b981;
+  margin-bottom: 2rem;
+}
+
+.career-offer-container button {
+  background: linear-gradient(to right, #0f172a, #2563eb);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.career-offer-container button:hover {
+  opacity: 0.9;
+}
+
+.footer-copy {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left, .right {
+    padding: 1rem;
+  }
+
+  .left h1 {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .author-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-user {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+}

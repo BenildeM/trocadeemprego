@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pagamento Concluído</title>
+</head>
+<body>
+  <h1>Obrigado pela sua compra!</h1>
+  <p>O download do seu eBook começará automaticamente. Se não começar, <a href="ebooks/ebook.pdf" download>Clique aqui para baixar</a>.</p>
+
+  <script>
+    // Força o download após 2 segundos
+    setTimeout(function () {
+      window.location.href = "ebooks/ebook.pdf";
+    }, 2000);
+  </script>
+</body>
+</html>
