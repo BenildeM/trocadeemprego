@@ -60,16 +60,14 @@ body {
 .cta-button {
   background: linear-gradient(to right, #0f172a, #2563eb);
   color: white;
-  padding: 1rem 2rem;
-  font-size: 1rem;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
 }
 
-.cta-button:hover {
-  opacity: 0.9;
+.cta-button: 
+transform: translateY(-2px);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .right {
