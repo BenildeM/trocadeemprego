@@ -45,9 +45,10 @@ body {
 }
 
 .price {
-  font-weight: bold;
+ font-weight: bold;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
+  color: #b91c1c; 
 }
 
 .bonus {
