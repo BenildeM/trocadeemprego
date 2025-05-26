@@ -76,7 +76,8 @@ body {
 }
 
 .product-image {
-  max-width: 100%;
+  max-width: 90%;
+  max-height: 500px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
