@@ -145,78 +145,69 @@ body {
 
 
 /* Seção 3: Perguntas Frequentes */
+/* Seção FAQ - Versão Corrigida */
 .faq {
-  background: linear-gradient(to bottom, #0f172a, #1f2937);
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
   padding: 4rem 1rem;
   color: white;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Inter', sans-serif;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 2rem auto;
 }
 
-.faq-item h2 {
+.faq h2 {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 2rem;
   color: #38ef7d;
 }
 
-.faq-item h2 span {
+.faq h3 {
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1.5rem;
   color: #00c6ff;
-}
-
-.faq-group-title {
-  font-size: 1.2rem;
-  margin: 2rem 0 1rem;
-  color: #38ef7d;
-  font-weight: bold;
+  border-bottom: 2px solid #4b5563;
+  padding-bottom: 0.5rem;
 }
 
 .faq-item {
-  border-bottom: 1px solid #4b5563;
-  padding: 1rem 0;
+  background: rgba(30, 58, 138, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
 }
 
-.faq-item summary {
-  list-style: none;
-  cursor: pointer;
-  font-weight: bold;
+.faq-item:hover {
+  background: rgba(30, 58, 138, 0.5);
+  transform: translateY(-2px);
+}
+
+.faq-item strong {
   color: #f3f4f6;
-  position: relative;
-  padding-left: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.faq-item summary::before {
-  content: "▸";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #38ef7d;
-  transition: transform 0.3s ease;
-}
-
-.faq-item[open] summary::before {
-  transform: rotate(90deg);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .faq-item p {
   color: #d1d5db;
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  line-height: 1.6;
-  padding-left: 1.5rem;
+  line-height: 1.7;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .faq-section h2 {
-    font-size: 1.7rem;
-  }
-
-  .faq-group-title {
-    font-size: 1rem;
-  }
+/* Efeito de acordeão (opcional) */
+.faq-item {
+  cursor: pointer;
 }
-
+.faq-item p {
+  display: none;
+}
+.faq-item.active p {
+  display: block;
+}
 
 /* Seção 4: Sobre a Autora */
 .author-section {
