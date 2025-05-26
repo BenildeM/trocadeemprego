@@ -1,29 +1,34 @@
-// /js/script.js
-
 function abrirCheckout() {
-  // 1. Configuração do checkout
-  const payload = {
-    productId: "ebook_troca_emprego",
-    amount: 375, // MT
-    currency: "MZN",
-    customerEmail: "", // Será preenchido pelo form
-    callbackUrl: window.location.origin + "/sucesso.html",
-    cancelUrl: window.location.href
+  // Dados do produto
+  const produto = {
+    nome: "Livro - De Invisível a Indispensável",
+    preco: 375, // MT
+    moeda: "MZN",
+    id: "trocadeemprego-001"
   };
 
-  // 2. Redirecionamento para o PaySuite (URL de exemplo - substitua pela real)
-  const paysuiteUrl = `https://api.paysuite.com/checkout?data=${encodeURIComponent(JSON.stringify(payload))}`;
+  // Simulação de redirecionamento para checkout
+  console.log("Redirecionando para checkout...", produto);
   
-  // 3. Abre em nova aba (ou pode usar window.location.href)
-  window.open(paysuiteUrl, "_blank");
+  // Em produção, substituir por:
+  // window.location.href = `https://checkout.com?produto=${produto.id}`;
+  
+  // Modal de confirmação (simulação)
+  alert(`Você será redirecionado para comprar: ${produto.nome} por ${produto.preco} MT`);
 }
 
-// 4. Adicionar máscara para telefone (opcional)
-function formatarTelefone(input) {
-  input.value = input.value
-    .replace(/\D/g, '')
-    .replace(/(\d{2})(\d)/, '$1 $2')
-    .replace(/(\d{4})(\d)/, '$1 $2')
-    .replace(/(\d{4})(\d{1,2})/, '$1 $2')
-    .replace(/( \d{4})\d+?$/, '$1');
-}
+// Efeitos interativos
+document.addEventListener('DOMContentLoaded', function() {
+  // Anima os cards ao rolar a página
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.benefit-card').forEach(card => {
+    observer.observe(card);
+  });
+});
