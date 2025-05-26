@@ -144,8 +144,7 @@ body {
 }
 
 
-/* Seção 3: Perguntas Frequentes */
-/* Seção FAQ - Versão Corrigida */
+/* Seção FAQ - Versão Final com Acordeão */
 .faq {
   background: linear-gradient(135deg, #0f172a, #1e3a8a);
   padding: 4rem 1rem;
@@ -171,42 +170,85 @@ body {
   padding-bottom: 0.5rem;
 }
 
+/* Container do item FAQ */
 .faq-item {
   background: rgba(30, 58, 138, 0.3);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 0; /* Alterado para 0 para melhor controle interno */
   margin-bottom: 1rem;
+  overflow: hidden; /* Importante para animações */
   transition: all 0.3s ease;
 }
 
-.faq-item:hover {
+/* Cabeçalho clicável */
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.5rem;
+  font-weight: bold;
+  color: #f3f4f6;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Ícone de +/- */
+.faq-item summary::marker { display: none; } /* Remove marcador padrão */
+.faq-item summary::-webkit-details-marker { display: none; } /* Para Chrome */
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #38ef7d;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Estilo quando aberto */
+.faq-item[open] summary {
   background: rgba(30, 58, 138, 0.5);
+}
+
+.faq-item[open] summary::after {
+  content: "-";
+  transform: translateY(-50%) rotate(0deg);
+}
+
+/* Conteúdo da resposta */
+.faq-item div {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  color: #d1d5db;
+  line-height: 1.7;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Efeitos de hover */
+.faq-item:hover {
+  background: rgba(30, 58, 138, 0.4);
   transform: translateY(-2px);
 }
 
-.faq-item strong {
-  color: #f3f4f6;
-  font-size: 1.1rem;
-  display: block;
-  margin-bottom: 0.5rem;
+.faq-item[open]:hover {
+  background: rgba(30, 58, 138, 0.6);
 }
 
-.faq-item p {
-  color: #d1d5db;
-  line-height: 1.7;
-  margin-left: 0;
-  padding-left: 0;
+/* Animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Efeito de acordeão (opcional) */
-.faq-item {
-  cursor: pointer;
-}
-.faq-item p {
-  display: none;
-}
-.faq-item.active p {
-  display: block;
+/* Responsivo */
+@media (max-width: 768px) {
+  .faq-item summary {
+    padding-right: 3rem;
+  }
+  
+  .faq-item summary::after {
+    right: 1rem;
+  }
 }
 
 /* Seção 4: Sobre a Autora */
