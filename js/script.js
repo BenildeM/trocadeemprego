@@ -1,3 +1,4 @@
+// Função para abrir checkout
 function abrirCheckout() {
   // Dados do produto
   const produto = {
@@ -17,8 +18,26 @@ function abrirCheckout() {
   alert(`Você será redirecionado para comprar: ${produto.nome} por ${produto.preco} MT`);
 }
 
-// Efeitos interativos
+// FAQ Accordion
 document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      // Fecha outros itens abertos
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains('active')) {
+          otherItem.classList.remove('active');
+        }
+      });
+      
+      // Abre/fecha o item atual
+      item.classList.toggle('active');
+    });
+  });
+
   // Anima os cards ao rolar a página
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
