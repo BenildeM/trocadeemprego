@@ -1,184 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>De Invisível a Indispensável</title>
-
-  <!-- Fonte Inter do Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-
-  <!-- Estilos externos -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Invisível a Indispensável - Transição de Carreira</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
- 
 </head>
 <body>
-
-  <!-- Seção 1 -->
-  <section class="hero-section">
+  <!-- Seção Hero -->
+  <section class="hero">
     <div class="container">
-      <div class="left">
-        <h1>Da Estagnação à<br> Reconstrução Profissional</h1>
-        <p>Um guia direto e prático para deixar de ser ignorado e se tornar essencial no mercado</p>
-        <div class="price">Apenas 375 MT</div>
-        <div class="bonus">+ Bônus: CV de transição de carreira</div>
-       <button class="cta-button" onclick="abrirCheckout()">Quero ser indispensável →</button>
+      <div class="hero-content">
+        <span class="badge">MÉTODO VALIDADO</span>
+        <h1>De <span class="text-highlight">Invisível</span> a Indispensável no Mercado</h1>
+        <p class="subtitle">Mude de carreira em 6 meses mesmo sem experiência prévia</p>
+        
+        <div class="offer-box">
+          <div class="price">375 MT</div>
+          <div class="bonus">+ Bônus: Modelo de CV Pronto</div>
+          <button class="cta-button pulse" onclick="abrirCheckout()">
+            Quero minha transição agora →
+          </button>
+        </div>
       </div>
-      <div class="right">
-        <img class="product-image" src="imagens/de-invesivel.png" alt="Imagem do produto" />
+      <div class="hero-image">
+        <img src="imagens/livro-transicao.png" alt="Livro De Invisível a Indispensável" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Benefícios -->
+  <section class="benefits">
+    <div class="container">
+      <h2>O que você vai <span class="text-highlight">conquistar</span>:</h2>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="icon">🚀</div>
+          <h3>Habilidades transferíveis</h3>
+          <p>Identifique competências valiosas que você já tem</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="icon">💼</div>
+          <h3>Transição segura</h3>
+          <p>Mude sem comprometer sua estabilidade financeira</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="icon">🎯</div>
+          <h3>Foco no essencial</h3>
+          <p>Aprenda apenas o que o mercado realmente valoriza</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Seção 2 -->
-  <section class="features-section">
-    <div class="features-container">
-      <h2>O Que Você Vai Conquistar</h2>
-      <p class="subtitle">Transforme sua carreira com conhecimentos práticos e aplicáveis desde o primeiro dia:</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <span class="icon">✔️</span>
-          <h3>Descubra habilidades que  já tens e podes usar agora</h3>
-          <p>Descubra competências que já possui e como aplicá-las em novas funções valorizadas pelo mercado.</p>
-        </div>
-        <div class="feature-card">
-          <span class="icon">✔️</span>
-          <h3>Saia do emprego atual para um novo cargo sem recomeçar do zero</h3>
-          <p>Elabore uma estratégia passo a passo para migrar de carreira sem comprometer sua estabilidade financeira.</p>
-        </div>
-        <div class="feature-card">
-          <span class="icon">✔️</span>
-          <h3>Entenda o mercado atual</h3>
-          <p>Conheça as áreas em expansão e como posicionar suas experiências para se destacar nesse novo cenário.</p>
-        </div>
-        <div class="feature-card">
-          <span class="icon">✔️</span>
-          <h3>Construa sua presença profissional</h3>
-          <p>Aprenda a comunicar seu valor e criar uma marca pessoal que atrai oportunidades alinhadas com seus objetivos.</p>
-        </div>
-        <div class="feature-card">
-          <span class="icon">✔️</span>
-          <h3>Supere barreiras psicológicas</h3>
-          <p>Desenvolva mentalidade e confiança para fazer a transição, superando o medo da mudança e da rejeição.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- Seção 3 -->
-  <section id="faq" class="faq">
-  <h2>❓ Perguntas Frequentes</h2>
-
-  <h3>📚 SOBRE O LIVRO</h3>
-
-  <details class="faq-item">
-    <summary>1. "Esse livro é para quem está em qual fase de carreira?"</summary>
-    <div>
-      <p><em>Para qualquer pessoa que sinta que seu potencial está invisível — seja um jovem profissional perdido, alguém em transição após os 40, ou até quem já mudou de área mas não se sente valorizado. O método funciona porque foca em <strong>habilidades transferíveis</strong>, não em idade ou experiência prévia.</em></p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary>2. "Como é diferente de outros livros sobre mudança de carreira?"</summary>
-    <div>
-      <p><em>Enquanto outros focam em 'como escrever um CV' ou listam vagas, este livro ensina a <strong>identificar o valor único que você já tem</strong> (mesmo que não perceba) e como reposicioná-lo em novas áreas. Inclui planos adaptáveis a diferentes realidades econômicas.</em></p>
-    </div>
-  </details>
-
-  <h3>🔁 PROCESSO DE TRANSIÇÃO</h3>
-
-  <details class="faq-item">
-    <summary>3. "Quanto tempo leva para ver resultados?"</summary>
-    <div>
-      <p><em>Depende do seu ponto de partida, mas alunos aplicando o método viram oportunidades em <strong>3 a 6 meses</strong>. Ana (caso do livro), por exemplo, conseguiu seu primeiro emprego em UX Design em 6 meses — mesmo sem formação técnica prévia.</em></p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary>4. "Preciso gastar dinheiro com cursos caros?"</summary>
-    <div>
-      <p><em>Não! O livro inclui uma lista de <strong>recursos gratuitos</strong> (Coursera, Google Ateliê Digital) e estratégias para ganhar experiência prática sem investimento inicial. O foco é <strong>aprender fazendo</strong>.</em></p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary>5. "E se eu não souber qual carreira escolher?"</summary>
-    <div>
-      <p><em>O <strong>Exercício do Mapa da Mina</strong> (páginas 14-15) guia você passo a passo para descobrir opções alinhadas ao que você ama, ao que o mercado precisa e ao que é financeiramente viável.</em></p>
-    </div>
-  </details>
-
-  <h3>💡 CONTEÚDO PRÁTICO</h3>
-
-  <details class="faq-item">
-    <summary>6. "O livro tem exercícios ou só teoria?"</summary>
-    <div>
-      <p><em>Cada capítulo termina com <strong>exercícios práticos</strong>, como a <strong>Análise SWOT</strong> (página 13) e planilhas para mapear habilidades. Inclui até scripts prontos para reformular sua experiência no LinkedIn.</em></p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary>7. "Como lidar com o medo de fracassar?"</summary>
-    <div>
-      <p><em>O capítulo <strong>"O Mito do Perfil Ideal"</strong> (página 8) desmonta crenças limitantes. Você aprenderá a enxergar mudanças como <strong>evolução</strong>, não como recomeço do zero — usando histórias reais como a do Carlos, que migrou de contador para chef aos 50 anos.</em></p>
-    </div>
-  </details>
-
-  <h3>🛒 COMPRA E ACESSO</h3>
-
-  <details class="faq-item">
-    <summary>8. "Como recebo o livro após a compra?"</summary>
-    <div>
-      <p><em>É um <strong>eBook em PDF</strong> enviado instantaneamente para seu e-mail.</em></p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary>9. "Posso reembolsar se não gostar?"</summary>
-    <div>
-      <p><em>Oferecemos <strong>7 dias de garantia incondicional</strong>. Se o método não ressoar com você, devolvemos 100% — sem perguntas.</em></p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary>10. "Preciso de mentoria adicional após ler?"</summary>
-    <div>
-      <p><em>O livro é completo por si só, mas se quiser acelerar resultados, ofereço <strong>mentoria em grupo</strong>. 72% dos leitores que aplicaram o livro conseguiram transição sem mentoria, mas ela reduz o tempo pela metade.</em></p>
-    </div>
-  </details>
-</section>
-  <!-- Seção 4: Sobre a Autora -->
-  <section class="author-section">
-    <div class="author-container">
-      <div class="author-avatar">👤</div>
-      <div class="author-info">
-        <h2>Sobre a <em>Autora</em></h2>
+  <!-- Seção Autora -->
+  <section class="author">
+    <div class="container">
+      <div class="author-content">
+        <h2>Sobre a Autora</h2>
         <h3>Benilde Martinho Jossamo</h3>
-        <p>
-          Especialista em Tecnologia da Informação e Recursos Humanos, com mais de 10 anos de experiência em TI e 5 em RH. Cofundadora da AIO Recruiting e da MATCH, atua na interseção entre pessoas, tecnologia e inovação.
-        </p>
-        <p>
-          Empreendedora inquieta, já criou desde plataformas digitais até experiências gastronômicas para grupos — sempre com o mesmo propósito: conectar talentos, ideias e possibilidades.
-        </p>
+        <p>Especialista em TI e RH com 15+ anos de experiência, já ajudou 200+ profissionais em transição de carreira.</p>
+      </div>
+      <div class="author-image">
+        <img src="imagens/autora.png" alt="Benilde Martinho" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- Seção 5: Oferta de Carreira -->
-  <section id="secao5" class="career-offer-section">
-    <div class="career-offer-container">
-      <h2>Você Não Precisa Se Conformar Com Uma Carreira Que Te Apaga</h2>
-      <p class="highlight">A sua experiência tem valor. Aprenda como comunicá-lo e direcionar sua carreira para um caminho que te reconheça e valorize.</p>
-      <p class="price-offer">Apenas <strong>375 MT</strong></p>
-      <p class="bonus-offer">+ Bônus: CV de transição de carreira pronto para usar</p>
-      <button onclick="abrirCheckout()">Quero ser indispensável →</button>
-      <div class="footer-copy">
-        © 2025 Benilde Martinho Jossamo. Todos os direitos reservados.
-      </div>
+  <!-- Seção CTA Final -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Pronto para <span class="text-highlight">transformar</span> sua carreira?</h2>
+      <button class="cta-button" onclick="abrirCheckout()">
+        Garantir meu acesso →
+      </button>
     </div>
   </section>
 
-
-  <!-- No final do body -->
-<script src="/trocadeemprego/js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
