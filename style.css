@@ -145,21 +145,21 @@ body {
 
 
 /* Seção 3: Perguntas Frequentes */
-.faq-section {
+.faq {
   background: linear-gradient(to bottom, #0f172a, #1f2937);
   padding: 4rem 1rem;
   color: white;
   font-family: 'Arial', sans-serif;
 }
 
-.faq-section h2 {
+.faq-item h2 {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 2rem;
   color: #38ef7d;
 }
 
-.faq-section h2 span {
+.faq-item h2 span {
   color: #00c6ff;
 }
 
