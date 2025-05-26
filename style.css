@@ -65,10 +65,11 @@ body {
   transition: all 0.3s;
 }
 
-.cta-button: 
-transform: translateY(-2px);
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 
 .right {
   flex: 1;
@@ -142,61 +143,50 @@ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   color: #4b5563;
 }
 
-/* Seção 3: Testemunho */
-.testimonial-section {
-  padding: 4rem 1rem;
-  background-color: #ffffff;
-  text-align: center;
-}
 
-.testimonial-container {
-  max-width: 800px;
+/* Seção 3: Perguntas Frequentes */
+.faq {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.testimonial-card {
-  background-color: #f3f4f6;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
-  text-align: left;
+.faq h2 {
+  font-size: 2rem;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.stars {
+.faq h3 {
   font-size: 1.25rem;
-  color: #f59e0b;
+  color: #2563eb;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-.quote {
-  font-style: italic;
-  color: #374151;
+.faq-item {
+  background: #f9fafb;
+  padding: 1.5rem;
   margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.testimonial-user {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: #2563eb;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.faq-item strong {
+  display: block;
   font-weight: bold;
-  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
 }
 
-.user-role {
-  font-size: 0.875rem;
-  color: #6b7280;
+.faq-item p {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.5;
 }
+
 
 /* Seção 4: Sobre a Autora */
 .author-section {
